@@ -12,5 +12,6 @@ public:
 	Person(string name, int index);
 
 	void show()const;
+	bool operator < (const Person& right)const;
 };
 

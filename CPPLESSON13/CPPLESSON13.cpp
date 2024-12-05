@@ -4,6 +4,9 @@
 #include "Song.h"
 #include <vector>
 #include "Windows.h"
+#include "Person.h"
+
+
 
 int main()
 {
@@ -65,4 +68,14 @@ int main()
     //    b.show();
     //    b.pop_front();
     //}
+    myQueue::PriorityQueue<Person> hospital;
+    hospital.push_back(Person("Maria", 1));
+    hospital.push_back(Person("Ivan", 4));
+    hospital.push_back(Person("Petro", 2));
+    hospital.push_back(Person("Andriy", 1));
+    while (!hospital.isEmpty())
+    {
+        hospital.first().show();
+        hospital.pop_front();
+    }
 }

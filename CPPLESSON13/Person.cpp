@@ -17,3 +17,8 @@ void Person::show() const
 	cout << "Name :" << name << endl;
 	cout << "Index :" << index << endl << endl;
 }
+
+bool Person::operator<(const Person& right) const
+{
+	return this->index < right.index;
+}
